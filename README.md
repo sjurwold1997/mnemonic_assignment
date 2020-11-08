@@ -2,7 +2,7 @@
 
 
 ### Local version  
-Instructions for running the applications local.
+Instructions for running the application local.
 
 ##### Prerequisites 
 If you already have Git, pip and Python installed, you can skip directly to 'Installation'
