@@ -19,6 +19,13 @@ And if you are on a Linux and on Debian-based distribution use:
     `sudo easy_install pip`
 
 #### Installation
+If you want to run it at once, type the following in your terminal:
+```
+git clone https://github.com/sjurwold1997/mnemonic_assignment.git && cd mnemonic_assignment && virtualenv venv && source venv/bin/activate && pip install -r requirements.txt && python manage.py migrate && python manage.py runserver
+```
+
+Underneath is a step-by-step guide with the same functionality as the snippet above.
+
 Follow these steps to run the application on your local machine:
 1. Clone our git repo in terminal  
 ```
