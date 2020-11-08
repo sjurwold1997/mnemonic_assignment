@@ -1,2 +1,2 @@
-# mnemonic_assignment
+# Mnemonic Assignment
 Simple bank account logic
