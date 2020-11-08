@@ -1,0 +1,24 @@
+{% extends "app/base.html" %}
+{% block content %}
+<br>
+<h3>
+    Select Destination Account
+</h3>
+
+{% if destinations %}
+        {% for account in destinations %}
+            <ul>
+                <div>
+                    <b>Account name: {{ account.name }}</b><br>
+                    <form method="POST" action="{% url 'prepare-transfer' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="source-id" value="{{ source.id }}">
+                        <input type="hidden" name="destination-id" value="{{ account.id }}">
+                        <input class="btn btn-success" type="submit" value="Select"/>
+                </div>
+            </ul>
+            <br>
+        {% endfor %}
+{% endif %}
+
+{% endblock content %}

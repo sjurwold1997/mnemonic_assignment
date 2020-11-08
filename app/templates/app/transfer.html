@@ -1,0 +1,22 @@
+{% extends "app/base.html" %}
+{% block content %}
+<br>
+
+<h3>Transfer from {{ source.name }} to {{ destination.name }}</h3>
+
+<form method=POST action="{% url 'execute-transfer' %}">
+    {% csrf_token %}
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount"><br>
+    <input type="hidden" name="source-id" value="{{ source.id }}">
+    <input type="hidden" name="destination-id" value="{{ destination.id }}">
+    <a>Available cash: {{ source.available_cash }}</b><br>
+    <input class="btn btn-success" type="submit" value="Transfer money">
+</form>
+<br>
+<form method=POST action="{% url 'overview' %}">
+    {% csrf_token %}
+    <input class="btn btn-danger" type="submit" value="Cancel transaction">
+</form>
+
+{% endblock content %}
