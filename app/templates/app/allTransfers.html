@@ -1,0 +1,35 @@
+{% extends "app/base.html" %}
+{% block content %}
+
+<br>
+<h3>
+    Overview of all previous transactions:
+</h3>
+<br>
+{% if transfers %}
+        {% for transfer in transfers %}
+            <ul>
+                <div>
+                    <b>{{ transfer.source_account.name }}  --> </b>
+                    <b>{{ transfer.destination_account.name }}</b> <br>
+                    <a>Transaction amount: {{ transfer.cash_amount }}.</a><br>
+                    <a>Date of transfer: {{ transfer.executed_time }}</a><br>
+                    <a>Transaction status: </a>
+                    {% if transfer.success %}
+                        <a style="color:green">Successful</a>
+                    {% else %}
+                        <a style="color:red">Failed</a>
+                    {% endif %}
+                    
+                </div>
+            </ul>
+            <br>
+        {% endfor %}
+{% else %}
+    <form method=POST action="{% url 'overview' %}">
+        {% csrf_token %}
+        <input class="btn btn-success" type="submit" value="Make your first transaction">
+    </form>
+{% endif %}
+
+{% endblock content %}
