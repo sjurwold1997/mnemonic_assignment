@@ -25,7 +25,7 @@ Follow these steps to run the application on your local machine:
 git clone https://github.com/sjurwold1997/mnemonic_assignment.git
 ```
 2. Go to the directory bank by typing   
-`cd bank`
+`cd mnemonic_assignment`
 3. Create a virtual environment.  
    `virtualenv env`
 4. Activate the virtual environment by typing   
@@ -33,13 +33,11 @@ git clone https://github.com/sjurwold1997/mnemonic_assignment.git
     You should now see (venv) in your command line, indicating venv is active.
 5.  After successfully cloning, you need to install all the required packages. Run the following command in Terminal:  
     `pip install -r requirements.txt`
-6. Go to the bank project
-`cd bank`
-7. Get the database up to date  
+6. Get the database up to date  
      `python manage.py migrate`
-8. Run the following command  
+7. Run the following command  
     `python manage.py runserver`. 
-9. Go to 127.0.0.1:8000 or localhost:8000 to run the app in a browser
+8. Go to 127.0.0.1:8000 or localhost:8000 to run the app in a browser
 
 By entering "localhost:8000" you will land in a page with a default database.
 
