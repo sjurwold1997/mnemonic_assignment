@@ -3,7 +3,7 @@
 
 <br>
 <h3>
-    Select the account you want to transfer money from:
+    Select the account you want to transfer money from
 </h3>
 
 {% if accounts %}
@@ -13,7 +13,7 @@
                 <div>
                     <b>{{ account.name }}</b><br>
                     <a>Cash Available: {{ account.available_cash }}</a><br>
-                    <a href="{% url 'select' account.id %}">Select Account</a>
+                    <a class="btn btn-success" href="{% url 'select' account.id %}">Select Account</a>
                 </div>
             </ul>
             <br>

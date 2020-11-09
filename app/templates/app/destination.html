@@ -1,15 +1,17 @@
 {% extends "app/base.html" %}
 {% block content %}
+
 <br>
 <h3>
-    Select Destination Account
+    Select destination account
 </h3>
 
 {% if destinations %}
         {% for account in destinations %}
             <ul>
                 <div>
-                    <b>Account name: {{ account.name }}</b><br>
+                    <b>{{ account.name }}</b><br>
+                    <a>Cash Available: {{ account.available_cash }}</a><br>
                     <form method="POST" action="{% url 'prepare-transfer' %}">
                         {% csrf_token %}
                         <input type="hidden" name="source-id" value="{{ source.id }}">
