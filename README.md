@@ -1,5 +1,9 @@
 # Mnemonic Assignment
 
+### Functionality
+
+The application is a basic REST API for performing transactions between two bank accounts. At the landing page you get to choose between pre-initiatied accounts as the source account, then you choose the destination account form the remaining set of accounts (excluding the source) and then finally you insert the amount you want to transfer. If there is enough money on the source account the transaction will result in a "OK 200" message and the money is transferred, otherwise you get an error message and the money remains in place. Under "See Transaction History" you can see an overview of all historical transactions.
+
 
 ### Local version  
 Instructions for running the application local.
